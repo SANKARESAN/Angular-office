@@ -1,0 +1,200 @@
+===============================================  ANGULAR  =======================================================
+11-12-24|
+---------
+
+
+ng serve
+ng s 
+
+
+==============================================================================================
+# ANGULAR : 
+-----------
+--> it is javascript framework. 
+--> it provide designing and development platform for creating dingle page application.
+--> latest version  angular is 18.
+--> Angular is developed and maintain  by Google.
+
+==============================================================================================
+# s/w pre-requisits :
+---------------------
+-nodejs
+node --version
+-ts
+tsc -v
+-angular                    
+ng --version                     --> it display angular version
+
+
+npm i -g @angular/cli           --> it will install angular
+ng new projname                 --> it will create angular project
+
+
+
+==============================================================================================
+
+# How to cretae ang proj ?
+
+step-1 :  ng new projname
+step-2 :  cd projname
+step-3 :  ng serve or ng s
+step-4 :  go to browser url and write localhost: 4200
+
+
+-- ang work on comp
+-- component : it is partial part of angular proj.
+             : it conain code for angular proj.
+             : it can be any part of proj, whch we can resue multiple time.
+
+--> In angular, root component name is app.
+
+==============================================================================================
+
+---------------------------------------------------------->>>>npx ng g c parentcomponent
+# How to create component in angular ?
+ng generate component componentname
+ng g c componentname
+
+
+-- when we create comp in angular it generate four files html, css, ts, spec.ts
+
+ng g c databinding
+ng g c directive
+
+
+==============================================================================================
+
+# How to get o/p of individual component ?
+-- go to comp ts file and copy its selector name and write as tag where you want.
+
+
+# databinding : getting or accessing data from one file to another file in same component.
+--------------
+
+1. interpolation {{}} : in send data from ts file => html file. 
+
+2. property binding[] : in this we set attribute(property) values  ts => html.
+
+3. event binding ()   : it this we sent data from html  => ts file.
+
+4. two-way databinding [()] : in this we can sent data from ts <=> html.
+                            : to perform two-way databinding we have ngModel directory but ngModel directive
+                              is not part of core angular module it is part formsModule, for this first we have 
+                              to import formsModule in component.ts file in import array.
+
+==============================================================================================
+
+==============================================================================================
+ANGULAR    TASKS :-
+
+
+TASK-1 : CREATE ONE COMP WITH NAME TOGGLEIMG IN WHICH ON BUTTON CLICK YOU HAVE TO TOGGLE IMAGE ...
+TASK-2 : CREATE ONE COMP WITH NAME CHANGEIMG IN WHICH ON BUTTON CLICK ON MULTIPLE BUTTON CHANGE THE IMAGE ...
+
+==============================================================================================
+
+# Directive in ANGULAR:
+
+-- it is use to change apperance and behaviour as well as perform DOM manipulation in ang.
+-- there are 3 types directives in angular,
+
+1. structural directive :  it is use to perform dom manipulation in angular.
+                         - structural directive denoted by *.
+                         - structural directives are *ngIf, *ngFor, *ngSwitchCase.
+                         - we can apply one directivce at a time to single element.
+                         - it isa part of common module, for this first we have to import common in component. 
+
+
+- ng-template : display out on the basis of condition
+- to create reference variable in angular we use #
+
+
+2. attribute  directive :  it is use to change appreance and behavior of DOM.
+
+-ngStyle : it is use to apply css style property on the basis of condition.
+-ngClass : it is use to apply css class on the basis of condition.
+-ngModel : it is use to perform two-way databinding.
+
+3. custom  directive    : the directive created by by developer.
+ng g directive directivcename
+
+# use of template reference variable.
+
+# component interaction:
+accessing data from parent component to child component.
+
+-- Input() decorator : it is use to sent data from parent component to child component.
+-- Ouput() decorator : it is use to sent data from  child component to  parent component.
+ 
+-====================================================================================================================
+
+pipes :
+------
+-- it is use to  transform property value without changing it original value.
+-- it is denoted by | sign.
+-- there are 3 types of pipes in ang,
+
+1. inbuilt pipe : pipe provided by ang.
+
+2. custom pipe  : pipe created by developer for particular use.
+
+3. thirdparty pipe :  pipes already developed by third party vender, first we have to install it and then use it.
+
+
+1. inbuilt pipe :
+- string pipe
+- json pipe
+- number pipe
+- currency pipe
+- date pipe
+
+
+2. custom pipe :
+# How to create custom pipe ? (npx)
+
+ng generate pipe pipename
+ng generate pipe shared/customerPipe/cube
+
+=====================================================================================================================
+ng g c mypipes
+TASK : Create one custom pipe with name square which will return the square of any number ?
+===========================================================================================================================
+
+How to bootstrap in angular  ?
+
+step-1 : npm i bootstrap
+
+step-2 : go to angular, json file and in its style array import its path.
+"./node_modules/bootstrap/dist/css/bootsrap.min.css"
+
+step-3 : restart angular proj.
+
+-====================================================================================================================
+layout folder:    (npx)
+-------------
+nav, pagenotfound, maindashboard, footer,login.
+
+ng g c layout/nav                       
+
+----------> ng g c layout/pagenotfound, 
+----------> ng g c layout/footer, 
+----------> ng g c layout/maindashboard 
+
+Form folder
+angform, utdf, rtf
+ng g c forms/angform
+
+
+-====================================================================================================================
+# Routing in Angular :-
+
+- navigation of component.
+- to display component output or navigation component by using routing in angular for it we write code in app.routes.ts file.
+- in angular, all routing comp will display its o/p below <router-outlet> </router-outlet> directory 
+
+1. naming routing :
+2. default routing : 
+3. re-direct routing :
+4. parameterize routing :
+5. chid routing :
+6. wild-card routing :
