@@ -198,3 +198,209 @@ ng g c forms/angform
 4. parameterize routing :
 5. chid routing :
 6. wild-card routing :
+
+
+====================================================================================================================
+12-12-24|
+---------
+
+
+# How to navigate in angular ?
+
+- to perform comp navigating, we have to use routerLink property with achor tag, but first we have to import RouterLnk in
+  component ts file from "@react/router" library.
+
+
+
+# Angular Form :
+
+- there 2 types of forms
+
+1. UTDF (User Template Driven Form) : 
+
+--> when we have create simple form validation in that case we use it.
+-- to perform validation we have to use ngModel directory with input element
+-- in this ngForm directory will hold data of all input elem in it.
+-- in utdf  form validation code reside in html file.
+
+
+
+
+2. RTF(Reactive Template Form):
+
+--> when we have to wrirte complex logic to perform form validation in that case we use it.
+-- to usee rtf form validation first we have to im[port ReactiveFormModle in formsModule comp.]
+-- in rtf we write form validationcode in ts file.
+
+--  in this we use mainly two classes , 1. FormGroup, 2. FormControl
+
+--> FormGroup   : it will hold information of all input element.
+--> FormControl : it will hold information of individual input elem.
+
+
+
+====================================================================================================================
+
+Service in Angular 
+
+-- in ang services is specisl class with extra power.
+-- it is use for multiple uses.
+
+1. to share data with multiple component. 
+2. we can implement business logic in it.
+3. we can perform excternal comm (database connection).
+
+---------------------------------------------------------------------------
+#1 How to create service ? 
+ng g service serviceName
+
+ng g service shared/services/itemsservice
+
+ng g service shared/services/dbservice
+---------------------------------------------------------------------------
+#2 How to access data from service into angular comp,
+
+-- if you want to service into angular for this first we have import service in component ts file and 
+create instance of service class.
+
+=============================================================================================================
+
+REST FAKE API
+CRUD 
+
+cd src/app/shared/database  (enter)
+json-server --watch -p 8888 db.json   (enter)
+
+
+=============================================================================================================
+
+
+# How to make API request from ANgular to server
+- to send  request from angular service to server for this we havae create instance of HttpClient classs in service
+construcvtpr, but httpClient class is not part of core angular it is part of HttpClientModule,
+
+-- so first we have to import provideHttpClient as well as withsonsupport in app.config.ts file and make entry of 
+these library in provider array.
+
+
+ng g c  crud/productdash
+ng g c  crud/productadd
+ng g c  crud/productedit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

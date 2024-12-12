@@ -7,6 +7,11 @@ import { AngformComponent } from './forms/angform/angform.component';
 import { UtdfComponent } from './forms/utdf/utdf.component';
 import { RtfComponent } from './forms/rtf/rtf.component';
 import { PagenotfoundComponent } from './layout/pagenotfound/pagenotfound.component';
+import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
+import { ItemComponent } from './item/item.component';
+import { ProductAddComponent } from './shared/database/crud/product-add/product-add.component';
+import { ProductEditComponent } from './shared/database/crud/product-edit/product-edit.component';
+import { ProductDashComponent } from './shared/database/crud/product-dash/product-dash.component';
 
 export const routes: Routes = [
 
@@ -18,17 +23,26 @@ export const routes: Routes = [
 
     //1. naming routing
     {path:"login", component:LoginComponent },
-    {path:"maindashboard", component:MaindashboardComponent },
-    {path:"databinding", component:DatabindingComponent },
+    {path:"maindashboard", component:MaindashboardComponent,children:[
+        {path:"item", component:ItemComponent},
 
-    //4. parameterize routing
-    {path:"mypipe/:id", component:MypipeComponent},
+        {path:"productDash", component:ProductDashComponent},
+        {path:"productAdd", component:ProductAddComponent},
+        {path:"productEdit/:id", component:ProductEditComponent},
+        
+     {path:"databinding", component:DatabindingComponent },
+     {path:"parent",component:ParentcomponentComponent},
+     {path:"mypipe/:id", component:MypipeComponent},
 
     // 5. child routing 
-    {path:"angform", component:AngformComponent, children:[
+        {path:"angform", component:AngformComponent, children:[
         {path:"utdf", component:UtdfComponent},
         {path:"rtf", component:RtfComponent}
     ]},
+    ] },
+
+    //4. parameterize routing
+    
     // 6. wild card routing
     {path:"**", component:PagenotfoundComponent}
 ];

@@ -1,5 +1,5 @@
-import { Component,Input, Output, output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component,Input, Output} from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
